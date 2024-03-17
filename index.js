@@ -11,10 +11,6 @@ calculate.addEventListener('click', function(){
     var ageMonth = todayDate.getMonth() - birthDate.getMonth();
     var ageDay = todayDate.getDate() - birthDate.getDate();
 
-    if (ageMonth < 0 || (ageMonth === 0 && todayDate.getDate() < birthDate.getDate())) {
-        ageYear--;
-        ageMonth += 12;
-    }
 
     if (ageDay < 0) {
         var lastMonth = new Date(todayDate.getFullYear(), todayDate.getMonth() - 1, 0);
@@ -22,5 +18,12 @@ calculate.addEventListener('click', function(){
         ageMonth--;
     }
 
-    calculateAge.innerHTML = "Your Age: " + ageYear + " Years, " + ageMonth + " Months, " + ageDay + " Days";
+    if (ageMonth < 0 || (ageMonth === 0 && todayDate.getDate() < birthDate.getDate())) {
+        ageYear--;
+        ageMonth += 12;
+    }
+
+    
+
+    calculateAge.innerHTML = ageYear + " Years, " + ageMonth + " Months, " + ageDay + " Days";
 });
