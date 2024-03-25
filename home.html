@@ -1,21 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator</title>
-    <link rel="stylesheet" type="text/css" href="home.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator</title>
+<link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Age Calculator!</h1>
-        <button class="calculate-button" id="calculateButton">Let's Calculate</button>
-    </div>
+  
+<div class="age-calculate">
+  <h1>Age Calculator</h1>
+  <h2>Enter Your Date Of Birth</h2>
+  <input type="date" id="birth_date" name="birth_date">
+  <button id="calculate">Calculate</button>
+</div>
+<div class="age-calculate">
+  <h1>Your Age</h1>
+  <div id="calculateAge"></div>
+</div>
 
-    <script>
-        document.getElementById("calculateButton").addEventListener("click", function() {
-            window.location.href = "index.html";
-        });
-    </script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
